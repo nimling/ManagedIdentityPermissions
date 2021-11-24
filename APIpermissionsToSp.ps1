@@ -103,7 +103,8 @@ function Remove-ManagedIdentityApiPermissions {
     Use to remove all permissions from managed identity
     
     .EXAMPLE
-    An example
+    Remove-ManagedIdentityApiPermissions -ManagedIdentityID <object ID> -PermissionNames @("<permission-name>") -ApplicationName <application name>
+    Remove-ManagedIdentityApiPermissions -ManagedIdentityID <object ID> -All
     
     .NOTES
     Running Connect-AzureAD -tenantID <tenant ID> with Privileged Role Administrator, Cloud Application Administrator, 
