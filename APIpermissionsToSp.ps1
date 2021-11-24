@@ -112,25 +112,20 @@ function Remove-ManagedIdentityApiPermissions {
     #>
     [CmdletBinding(DefaultParameterSetName = 'ID_All')]
     param (
-        # Parameter help description
         [Parameter(Mandatory=$true, ParameterSetName = 'Name_All', Position=0)]
         [Parameter(Mandatory=$false, ParameterSetName = 'Name_PermissionSet', Position=0)]
         [string]$ManagedIdentityDisplayName,
-        # Parameter help description
         [Parameter(Mandatory=$true, ParameterSetName = 'ID_All', Position=0)]
         [Parameter(Mandatory=$true, ParameterSetName = 'ID_PermissionSet', Position=0)]
         [string]$ManagedIdentityID,
-        # Parameter help description
         [Parameter(Mandatory=$true, ParameterSetName = 'Name_PermissionSet')]
         [Parameter(Mandatory=$true, ParameterSetName = 'ID_PermissionSet')]
         [string]$ApplicationName,
-        # Parameter help description
         [Parameter(Mandatory=$true, ParameterSetName = 'Name_PermissionSet')]
         [Parameter(Mandatory=$true, ParameterSetName = 'ID_PermissionSet')]
         [System.Object[]]$PermissionNames,
-        # Parameter help description
         [Parameter(Mandatory=$false, ParameterSetName = 'Name_All')]
-         [Parameter(Mandatory=$false, ParameterSetName = 'ID_All')]
+        [Parameter(Mandatory=$false, ParameterSetName = 'ID_All')]
         [switch]$All = $false
     )
 
